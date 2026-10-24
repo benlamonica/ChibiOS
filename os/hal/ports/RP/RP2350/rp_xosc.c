@@ -35,7 +35,9 @@
  * @note    Crystal startup typically takes 1-2 ms. We allow up to 100 ms
  *          to account for slow crystals and ROSC timing variance.
  */
+#if !defined(RP_XOSC_STABLE_TIMEOUT_US)
 #define RP_XOSC_STABLE_TIMEOUT_US       100000U
+#endif
 
 /*===========================================================================*/
 /* Driver exported variables.                                                */
